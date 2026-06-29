@@ -104,3 +104,101 @@ table{
     border-radius:8px;
     border:1px solid #ccc;
 }
+
+
+/* ============================
+   APP MOBILE MODE
+============================ */
+
+body {
+  background: #f5f7fb;
+}
+
+/* TITOLI */
+h1, h2 {
+  text-align: center;
+}
+
+/* DASHBOARD CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* CARD PIÙ COMPATTE */
+.card {
+  padding: 14px;
+  border-radius: 14px;
+}
+
+/* CLASSIFICA STYLE APP */
+#tabellaClassifica {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+#tabellaClassifica th {
+  background: #1565c0;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+}
+
+#tabellaClassifica td {
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* PRONOSTICI COME "CARD EVENTO" SU MOBILE */
+.tabella table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabella tr {
+  background: white;
+  border-radius: 12px;
+}
+
+/* EVENTI PIÙ LEGGIBILI */
+.tabella td, .tabella th {
+  padding: 8px;
+  font-size: 13px;
+}
+
+/* CORRETTO / ERRATO */
+.corretto {
+  background: #d4f8d4;
+  font-weight: bold;
+}
+
+.errato {
+  background: #ffd6d6;
+}
+
+/* SU SCHERMI PICCOLI */
+@media (max-width: 768px) {
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #tabellaClassifica td,
+  #tabellaClassifica th {
+    font-size: 12px;
+  }
+
+  .tabella {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 700px;
+  }
+}
